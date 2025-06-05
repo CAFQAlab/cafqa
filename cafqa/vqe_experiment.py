@@ -7,13 +7,20 @@ from qiskit_nature.second_q.drivers import PySCFDriver
 from qiskit_nature.second_q.mappers import ParityMapper
 
 from skquant.opt import minimize
-import hypermapper
 import json
 import sys
 from numbers import Number
 
-from vqe_helpers import *
-from circuit_manipulation import *
+from .vqe_helpers import *
+from .circuit_manipulation import *
+
+# Import hypermapper conditionally to avoid dependency issues
+try:
+    import hypermapper
+
+    HAS_HYPERMAPPER = True
+except ImportError:
+    HAS_HYPERMAPPER = False
 
 
 def molecule(atom_string, new_num_orbitals=None, **kwargs):
@@ -201,6 +208,11 @@ def run_cafqa(
     Returns:
     Tuple of energy estimate and optimized CAFQA parameters.
     """
+    if not HAS_HYPERMAPPER:
+        raise ImportError(
+            "hypermapper is required for run_cafqa but is not available. Please install it."
+        )
+
     # check right number of parameters given
     ansatz_func = vqe_kwargs.get("ansatz_func", efficientsu2_full)
     ansatz_reps = vqe_kwargs.get("ansatz_reps", 1)

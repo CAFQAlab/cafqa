@@ -16,7 +16,7 @@ import numpy as np
 from numpy.linalg import eigh
 import csv
 import stim
-from circuit_manipulation import *
+from .circuit_manipulation import *
 
 from timeit import default_timer as timer
 
