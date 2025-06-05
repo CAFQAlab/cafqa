@@ -1,7 +1,7 @@
 """
 CAFQA: A classical simulation bootstrap for variational quantum algorithms
 
-This package provides tools for implementing CAFQA (Clifford Ansatz For Quantum Algorithms),
+This package provides tools for implementing CAFQA (A classical simulation bootstrap for variational quantum algorithms),
 a method for bootstrapping variational quantum algorithms using efficient classical simulation
 of Clifford circuits.
 """
