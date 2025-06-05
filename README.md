@@ -13,3 +13,8 @@ Full list of dependencies (`pip install ...`):
 - scikit-quant
 - hypermapper
 - pyscf
+
+original code: https://github.com/makzator/CAFQA
+https://github.com/rgokulsm/CAFQA
+
+CAFQA implemented using genetic algorithm can be found as part of Clapton at here https://github.com/makzator/clapton/tree/main

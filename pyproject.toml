@@ -52,9 +52,9 @@ cafqa = ["hypermapper"]
 all = ["hypermapper"]
 
 [project.urls]
-"Paper" = "https://arxiv.org/abs/2202.12924"
-"Homepage" = "https://github.com/your-repo/cafqa"
-"Repository" = "https://github.com/your-repo/cafqa"
+"Paper" = "https://dl.acm.org/doi/abs/10.1145/3567955.3567958"
+"Homepage" = "https://github.com/CAFQAlab/cafqa"
+"Repository" = "https://github.com/CAFQAlab/cafqa"
 
 [build-system]
 requires = ["hatchling"]
